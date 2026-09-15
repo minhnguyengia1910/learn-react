@@ -1,12 +1,9 @@
 import './App.css';
 import { useState } from 'react';
 import logo from './logo.svg';
+import ABC from './component/learn/MyComponent';
+import {SecondComponent, ThirdComponent} from './component/learn/SecondComponent';
 
-const Mycomponent = () => {
-  return(
-    <div> hỏi dân IT update</div>
-  );
-}
 const App = () => {
   const [count, setCount] = useState(0);
   return (
@@ -24,7 +21,9 @@ const App = () => {
         >
           Learn React
         </a>
-        <Mycomponent/>
+        <ABC/>
+        <SecondComponent/>
+        <ThirdComponent/>
       </header>
     </div>
   );
