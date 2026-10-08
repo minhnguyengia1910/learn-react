@@ -1,31 +1,15 @@
-import './App.css';
-import { useState } from 'react';
-import logo from './logo.svg';
-import ABC from './component/learn/MyComponent';
-import {SecondComponent, ThirdComponent} from './component/learn/SecondComponent';
-
+import './components/todo/todo.css'
+import TodoNew from './components/todo/TodoNew';
+import TodoData from './components/todo/TodoData';
+import ReactLogo from "./assets/react.png"
 const App = () => {
-  const [count, setCount] = useState(0);
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <ABC/>
-        <SecondComponent/>
-        <ThirdComponent/>
-      </header>
+  return(
+    <div className="todo-container">
+      <div className="todo-title">Todo List</div> 
+      <TodoNew/>
+      <TodoData/>
+      <img className="todo-logo" src={ReactLogo} alt="React Logo"/>
     </div>
-  );
+  )  
 }
 export default App;
