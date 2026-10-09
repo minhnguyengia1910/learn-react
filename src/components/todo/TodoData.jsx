@@ -1,8 +1,20 @@
-const TodoData = () => {
+const TodoData = (props) => {
+    // props là một object {}
+    // {
+    //     name: "Eric",
+    //     age: 30,
+    //     data: {}
+    // }
+    const {name,age,data} = props;
+    // const name = props.name;
+    // const age = props.age;
+    // const data = props.data;
+    // console.log(">>>> check props: ", props);
     return(
         <div className="todo-data">
-        <div>Learning React</div>
-        <div>Watching TV</div>
+            <div>My name is {name}</div>
+            <div>Learning React</div>
+            <div>Watching TV</div>
         </div>
     )   
 }
